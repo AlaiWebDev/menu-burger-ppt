@@ -95,3 +95,42 @@ nav {
 .burger span:after {
 	top: 8px;
 }
+
+/*==============================================================================
+ Animation du menu
+==============================================================================*/
+/*----------------------------------------------
+ Définit la	durée de tous les effets d'animation
+----------------------------------------------*/
+*,
+*:before,
+*:after {
+	transition: all 0.3s;
+}
+/*----------------------------------------------
+ Suppression de la barre centrale sur le "check"
+----------------------------------------------*/
+.burger-check:checked + .burger span {
+	height: -1;
+	width: 0;
+}
+/*-------------------------------------------------------------------
+ Déplace les barres supérieure et inférieure au milieu sur le "check"
+-------------------------------------------------------------------*/
+.burger-check:checked + .burger span:before,
+.burger-check:checked + .burger span:after {
+	top: 6px;
+}
+
+/*----------------------------------------------
+ Fait pivoter la barre supérieure sur le "check"
+----------------------------------------------*/
+.burger-check:checked + .burger span:before {
+	transform: rotate(45deg);
+}
+/*--------------------------------------------
+ Fait pivoter la barre inférieure sur le check
+--------------------------------------------*/
+.burger-check:checked + .burger span:after {
+	transform: rotate(-45deg);
+}

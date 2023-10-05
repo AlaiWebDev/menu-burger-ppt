@@ -134,3 +134,45 @@ nav {
 .burger-check:checked + .burger span:after {
 	transform: rotate(-45deg);
 }
+
+/*==============================================================================
+ Ajout des items du menu
+==============================================================================*/
+nav ul {
+	position: relative;
+	float: left;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul a {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 0;
+	line-height: 50px;
+	padding: 0 15px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #333;
+	text-align: left;
+}
+
+/* Définir la hauteur de l'élément 'a' afin de faire apparaître le menu lors du "check"  */
+#main-nav:checked ~ ul a {
+	height: 50px;
+}
+
+/*------------------------------------------------------
+ Si l'on souhaite que le menu ne repousse pas le contenu
+ il faut décommenter le bloc suivant
+------------------------------------------------------*/
+/* header {
+	position: absolute;
+	width: 100%;
+  	top:0;
+  	z-index:10;
+  	float: left;
+} */

@@ -64,3 +64,34 @@ nav {
 	background: #eee;
 	overflow: hidden;
 }
+
+/*==============================================================================
+ Apparence du menu
+==============================================================================*/
+/*--------------------------------------------------
+ Crée l'apparence de l'icône du hamburger
+ en utilisant le span interne et les pseudo-éléments
+--------------------------------------------------*/
+.burger span,
+.burger span:before,
+.burger span:after {
+	position: absolute;
+	content: '';
+	top: 22px;
+	width: 40px;
+	height: 4px;
+	background: #333;
+	border-radius: 0.2em;
+}
+/*------------------------------
+ Position de la barre supérieure
+------------------------------*/
+.burger span:before {
+	top: -8px;
+}
+/*------------------------------
+ Position de la barre inférieure
+------------------------------*/
+.burger span:after {
+	top: 8px;
+}
